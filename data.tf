@@ -7,7 +7,7 @@ resource "aws_s3_bucket" "demo" {
 }
 
 resource "aws_s3_object" "test_file" {
-  bucket = "vimal-demo-bucket-12345"
+  bucket = "infra-terra-bucket-12453"
   key    = "test-file.txt"
   content = "Terraform via TeamCity pipeline"
 }
