@@ -1,7 +1,7 @@
 resource "aws_security_group" "teamcity_sg" {
 
   tags = {
-    Name = "morning-8.45.change"
+    Name = "morning-9_AM.change"
   }
 
   name        = "teamcity-demo-sg"
