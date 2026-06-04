@@ -1,5 +1,9 @@
 resource "aws_security_group" "teamcity_sg" {
 
+  tags = {
+    Name = "morning-8.10"
+  }
+
   name        = "teamcity-demo-sg"
   description = "Created from TeamCity pipeline"
   vpc_id      = data.aws_vpc.default.id
@@ -18,7 +22,5 @@ resource "aws_security_group" "teamcity_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  tags = {
-    Name = "Tag-teamcity-demo-sg"
-  }
+
 }
