@@ -4,9 +4,9 @@ resource "aws_security_group" "teamcity_sg" {
     Name = "morning-9_35_AM.change"
   }
 
-  name        = "teamcity-demo-sg"
+  name        = var.sg_name
   description = "Created from TeamCity pipeline"
-  vpc_id      = data.aws_vpc.default.id
+  vpc_id      = var.vpc_id
 
   ingress {
     from_port   = 22
